@@ -1,0 +1,34 @@
+﻿
+	@model List<StudyTracker.Models.Subject>
+
+@{
+	ViewData["Title"] = "Subjects";
+}
+
+<h1>My Subjects</h1>
+
+<table>
+	<tr>
+
+		<th>Name</th>
+		<th>Lecturer</th>
+		<th>Current mark</th>
+
+
+	</tr>
+
+
+	
+		@foreach (var subject in Model)
+		{
+			<tr>
+
+			<td>@subject.Name</td>
+			<td>@subject.Lecturer</td>
+			<td>@subject.CurrentMark</td>
+			</tr>
+		
+		
+		}
+	
+</table>

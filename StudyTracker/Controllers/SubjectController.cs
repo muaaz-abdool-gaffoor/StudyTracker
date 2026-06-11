@@ -33,6 +33,13 @@ namespace StudyTracker.Controllers
 
         }
 
+        public IActionResult Index()
+        {
+            var subjects = _subjectManager.ReturnList();
+            return View(subjects);
+        
+        }
+
 
     }
 }

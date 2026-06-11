@@ -13,6 +13,11 @@
             //create a list that stores object type Task
        List<Task> TaskList = new List<Task>();
 
+        public void AddTask(Task task)
+        { 
+            TaskList.Add(task);
+        
+        }
 
 
     }
