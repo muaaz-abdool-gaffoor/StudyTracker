@@ -1,0 +1,22 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<form action="/Task/Create" method="post">
+	
+	<h1>Create Task</h1>
+
+	<label>Task name</label>
+	<input type="text" name="Name" />
+	<br />
+	<label>Completed</label>
+	<input type="checkbox" name="Iscomplete" />
+	<br />
+	
+	<input type="hidden" name="subjectID" value="@ViewData = ["subjectId"]" />
+
+	<br /><button>Submit</button>
+
+</form>

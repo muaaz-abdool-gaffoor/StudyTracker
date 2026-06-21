@@ -14,6 +14,7 @@
         //A method that adds a subject to the list
         public void AddSubject(Subject subject)
         {
+            subject.Id = ListStorage.Count;
             ListStorage.Add(subject);
 
         }

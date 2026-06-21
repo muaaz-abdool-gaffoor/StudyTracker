@@ -3,6 +3,7 @@
     public class Subject
     {
 
+        public int Id { get; set; }
         public string Name { get; set; }
 
        public string Lecturer { get; set; }
@@ -11,11 +12,16 @@
 
 
             //create a list that stores object type Task
-       List<Task> TaskList = new List<Task>();
+       List<StudyTask> TaskList = new List<StudyTask>();
 
-        public void AddTask(Task task)
+        public void AddTask(StudyTask task)
         { 
             TaskList.Add(task);
+        
+        }
+
+        public void RemoveTask(int index)
+        { 
         
         }
 
