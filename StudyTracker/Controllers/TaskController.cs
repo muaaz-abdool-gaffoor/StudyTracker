@@ -15,11 +15,7 @@ namespace StudyTracker.Controllers
         
         }
         
-        public IActionResult Index()
-        {
-            return View();
-        }
-
+  
         public IActionResult Create(int subjectID)
         {
 
@@ -30,12 +26,21 @@ namespace StudyTracker.Controllers
 
 
         [HttpPost]
-        public IActionResult Create(StudyTask task, int subjectID)
+        public IActionResult Create(StudyTask task, int subjectID, bool IsComplete)
         {
            var subject = _subjectManager.ReturnList()[subjectID];
-           subject.AddTask(task);
+
+            task.IsComplete = Request.Form["IsComplete"].Contains("true");
+            subject.AddTask(task);
             return RedirectToAction("Index", "Subject");
 
+
+        }
+
+        public IActionResult Index (int SubjectID)
+        {
+            var subject = _subjectManager.ReturnList()[SubjectID];
+            return View(subject.TaskList);
 
         }
     }

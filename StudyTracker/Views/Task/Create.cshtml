@@ -9,13 +9,14 @@
 	<h1>Create Task</h1>
 
 	<label>Task name</label>
-	<input type="text" name="Name" />
+	<input type="text" name="TaskName" />
 	<br />
 	<label>Completed</label>
-	<input type="checkbox" name="Iscomplete" />
+	
+	<input type="checkbox" name="IsComplete" value="true" />
 	<br />
 	
-	<input type="hidden" name="subjectID" value="@ViewData = ["subjectId"]" />
+	<input type="hidden" name="subjectID" value="@ViewData["subjectId"]" />
 
 	<br /><button>Submit</button>
 

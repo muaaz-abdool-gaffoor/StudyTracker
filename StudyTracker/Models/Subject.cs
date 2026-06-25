@@ -12,7 +12,7 @@
 
 
             //create a list that stores object type Task
-       List<StudyTask> TaskList = new List<StudyTask>();
+     public  List<StudyTask> TaskList = new List<StudyTask>();
 
         public void AddTask(StudyTask task)
         { 
@@ -20,6 +20,7 @@
         
         }
 
+    
         public void RemoveTask(int index)
         { 
         
