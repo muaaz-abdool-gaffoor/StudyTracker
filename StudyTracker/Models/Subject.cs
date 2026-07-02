@@ -8,6 +8,8 @@
 
        public string Lecturer { get; set; }
 
+        public string Notes { get; set; }
+
        public double CurrentMark { get; set; }
 
 
